@@ -1,0 +1,4 @@
+# Force correct end-of-line settings
+*.sln eol=crlf
+*.csproj eol=crlf
+*.asset eol=lf
