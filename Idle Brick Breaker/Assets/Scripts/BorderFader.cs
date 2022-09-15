@@ -13,6 +13,7 @@ public class BorderFader : MonoBehaviour
     private void Start()
     {
         _sRend = this.gameObject.GetComponent<SpriteRenderer>();
+
         StartCoroutine(FadeSprite());
     }
 
