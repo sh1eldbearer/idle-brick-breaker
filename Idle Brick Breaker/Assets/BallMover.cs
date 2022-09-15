@@ -11,11 +11,20 @@ public class BallMover : MonoBehaviour
     private Rigidbody2D _thisRb;
 
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         _thisGObj = this.gameObject;
         _thisTf = _thisGObj.transform;
         _thisRb = _thisGObj.GetComponent<Rigidbody2D>();
+    }
+
+    private void OnEnable()
+    {
+        // TODO: Delete this once Ball
+        if (_thisGObj == null)
+        {
+            Start();
+        }
 
         _thisTf.Rotate(Vector3.forward, Random.Range(0f, 360f));
         MoveBall();
