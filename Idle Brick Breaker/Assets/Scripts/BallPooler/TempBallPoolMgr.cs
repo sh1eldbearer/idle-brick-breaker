@@ -13,8 +13,6 @@ public class TempBallPoolMgr : MonoBehaviour
     [Space, SerializeField] private KeyCode _addBallKeyCode;
     [SerializeField] private KeyCode _removeBallKeyCode;
 
-    private bool _addBallKeypressed = false;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -54,7 +52,7 @@ public class TempBallPoolMgr : MonoBehaviour
         Debug.Log("AddBall called");
         int spawnPoint = Random.Range(0, 15);
 
-        GameObject newBall = Instantiate(_ballPrefab, _spawnPoints[spawnPoint].position, Quaternion.identity);
+        GameObject newBall = Instantiate(_ballPrefab, _spawnPoints[spawnPoint].position, Quaternion.identity, this.transform);
         _balls.Add(newBall);
     }
 
