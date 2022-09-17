@@ -20,7 +20,7 @@ public class BallMover : MonoBehaviour
 
     private void OnEnable()
     {
-        // TODO: Delete this once Ball
+        // TODO: Delete this once Ball factory is properly implemented
         if (_thisGObj == null)
         {
             Start();

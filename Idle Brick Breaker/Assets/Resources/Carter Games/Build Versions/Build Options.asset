@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Build Options
   m_EditorClassIdentifier: 
   assetStatus: 1
-  buildUpdateTime: 1
+  buildUpdateTime: 0
   updateSystematic: 2
   lastSystematicNumber: 
   androidUpdateBundleCode: 0
