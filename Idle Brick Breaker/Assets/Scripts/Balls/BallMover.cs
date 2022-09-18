@@ -37,8 +37,7 @@ public class BallMover : MonoBehaviour
         {
             initialAngle = Random.Range(0.0001f + _rightAngleIgnoreRange, 360.0001f - _rightAngleIgnoreRange);
         }
-
-        Debug.Log("Initial angle is " + initialAngle);
+        
         _thisTf.Rotate(Vector3.forward, Random.Range(0f, 360f));
 
 
@@ -48,6 +47,11 @@ public class BallMover : MonoBehaviour
     private void MoveBall()
     {
         _thisRb.velocity = _thisTf.up * _baseMoveSpeed;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+
     }
 
     private void OnDisable()
